@@ -1,18 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{D7D08D38-300B-40F3-A7D8-43093DDF834B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostinOK.Mastodon-Weather-Bot.AWS.Lambda", "src\LostinOK.Mastodon-Weather-Bot.AWS.Lambda\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.csproj", "{EAE58A24-63BE-49A9-B860-B82D8956E7D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F316A70B-5689-47B9-A025-D27FB79DF701}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{609C5F50-886A-4639-81DA-DA1E9D720E43}"
-	ProjectSection(SolutionItems) = preProject
-		Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests.csproj = Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests.csproj
-	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests", "Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests.csproj", "{85F3CF93-EEF4-4558-BC78-54CB172A0DC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,20 +17,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7D08D38-300B-40F3-A7D8-43093DDF834B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7D08D38-300B-40F3-A7D8-43093DDF834B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7D08D38-300B-40F3-A7D8-43093DDF834B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7D08D38-300B-40F3-A7D8-43093DDF834B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EAE58A24-63BE-49A9-B860-B82D8956E7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EAE58A24-63BE-49A9-B860-B82D8956E7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE58A24-63BE-49A9-B860-B82D8956E7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE58A24-63BE-49A9-B860-B82D8956E7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F3CF93-EEF4-4558-BC78-54CB172A0DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F3CF93-EEF4-4558-BC78-54CB172A0DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F3CF93-EEF4-4558-BC78-54CB172A0DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F3CF93-EEF4-4558-BC78-54CB172A0DC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EAE58A24-63BE-49A9-B860-B82D8956E7D7} = {F316A70B-5689-47B9-A025-D27FB79DF701}
+		{85F3CF93-EEF4-4558-BC78-54CB172A0DC3} = {609C5F50-886A-4639-81DA-DA1E9D720E43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05C8E43C-BCF9-4EC2-AFC6-1C9054CA659C}
