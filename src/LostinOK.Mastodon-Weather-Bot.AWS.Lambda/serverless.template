@@ -1,0 +1,310 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Description": "An AWS Serverless Application. This template is partially managed by Amazon.Lambda.Annotations (v0.12.0.0).",
+  "Resources": {
+    "LostinOK.Mastodon-Weather-Bot.AWS.Lambda1FunctionsDefaultGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnetcore3.1",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Default_Generated::Default",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/",
+              "Method": "GET",
+              "PayloadFormatVersion": "2.0"
+            }
+          }
+        }
+      }
+    },
+    "LostinOK.Mastodon-Weather-Bot.AWS.Lambda1FunctionsAddGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnetcore3.1",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Add_Generated::Add",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/add/{x}/{y}",
+              "Method": "GET",
+              "PayloadFormatVersion": "2.0"
+            }
+          }
+        }
+      }
+    },
+    "LostinOK.Mastodon-Weather-Bot.AWS.Lambda1FunctionsSubtractGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnetcore3.1",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Subtract_Generated::Subtract",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/subtract/{x}/{y}",
+              "Method": "GET",
+              "PayloadFormatVersion": "2.0"
+            }
+          }
+        }
+      }
+    },
+    "LostinOK.Mastodon-Weather-Bot.AWS.Lambda1FunctionsMultiplyGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnetcore3.1",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Multiply_Generated::Multiply",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/multiply/{x}/{y}",
+              "Method": "GET",
+              "PayloadFormatVersion": "2.0"
+            }
+          }
+        }
+      }
+    },
+    "LostinOK.Mastodon-Weather-Bot.AWS.Lambda1FunctionsDivideGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnetcore3.1",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Divide_Generated::Divide",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/divide/{x}/{y}",
+              "Method": "GET",
+              "PayloadFormatVersion": "2.0"
+            }
+          }
+        }
+      }
+    },
+    "LostinOKMastodonWeatherBotAWSLambdaFunctionsDefaultGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnet6",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Default_Generated::Default",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "LostinOKMastodonWeatherBotAWSLambdaFunctionsAddGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnet6",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Add_Generated::Add",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/add/{x}/{y}",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "LostinOKMastodonWeatherBotAWSLambdaFunctionsSubtractGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnet6",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Subtract_Generated::Subtract",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/subtract/{x}/{y}",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "LostinOKMastodonWeatherBotAWSLambdaFunctionsMultiplyGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnet6",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Multiply_Generated::Multiply",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/multiply/{x}/{y}",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "LostinOKMastodonWeatherBotAWSLambdaFunctionsDivideGenerated": {
+      "Type": "AWS::Serverless::Function",
+      "Metadata": {
+        "Tool": "Amazon.Lambda.Annotations",
+        "SyncedEvents": [
+          "RootGet"
+        ]
+      },
+      "Properties": {
+        "Runtime": "dotnet6",
+        "CodeUri": ".",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "PackageType": "Zip",
+        "Handler": "LostinOK.Mastodon-Weather-Bot.AWS.Lambda::LostinOK.Mastodon_Weather_Bot.AWS.Lambda.Functions_Divide_Generated::Divide",
+        "Events": {
+          "RootGet": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/divide/{x}/{y}",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "ApiURL": {
+      "Description": "API endpoint URL for Prod environment",
+      "Value": {
+        "Fn::Sub": "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
+      }
+    }
+  }
+}
