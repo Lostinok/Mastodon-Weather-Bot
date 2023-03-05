@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F316A70B-568
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{609C5F50-886A-4639-81DA-DA1E9D720E43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests", "Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests.csproj", "{85F3CF93-EEF4-4558-BC78-54CB172A0DC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostinOK.Mastodon-Weather-Bot.AWS.Lambda.UnitTests", "Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.Tests\LostinOK.Mastodon-Weather-Bot.AWS.Lambda.UnitTests.csproj", "{85F3CF93-EEF4-4558-BC78-54CB172A0DC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
