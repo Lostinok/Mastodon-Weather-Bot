@@ -22,22 +22,39 @@ namespace LostinOK.Mastodon_Weather_Bot.Infrastructure.IntegrationTest
         [Fact]
         public async Task GetPointAsync_Success()
         {
-            var inMemorySettings = new Dictionary<string, string?>
-            {
-                {"UserAgent", "TestBot, http://testbot.com"}
-            };
-
-            IConfiguration configuration = new ConfigurationBuilder()
-                .AddInMemoryCollection(inMemorySettings.ToList())
-                .Build();
-
-            var api = new NWSWeatherAPI(configuration);
+            var api = new NWSWeatherAPI(GetValidConfig());
             var result = await api.GetPointAsync(35.8789, -97.4253);
             Assert.NotNull(result);
             Assert.NotNull(result.ExpirationDate);
             Assert.NotNull(result.Value);
             Assert.NotNull(result.Value.Properties);
 
+        }
+
+        [Fact]
+        public async Task GetZone_Success()
+        {
+            var api = new NWSWeatherAPI(GetValidConfig());
+            var result = await api.GetZones(35.8789, -97.4253, "forecast");
+            Assert.NotNull(result);
+            Assert.NotNull(result.ExpirationDate);
+            Assert.NotNull(result.Value);
+            Assert.NotNull(result.Value.Zones);
+            Assert.Single(result.Value.Zones);
+            Assert.NotNull(result.Value.Zones[0].ZoneDetail);
+
+        }
+
+        private IConfiguration GetValidConfig()
+        {
+            var inMemorySettings = new Dictionary<string, string?>
+            {
+                {"UserAgent", "TestBot, http://testbot.com"}
+            };
+
+            return new ConfigurationBuilder()
+                .AddInMemoryCollection(inMemorySettings.ToList())
+                .Build();
         }
     }
 }

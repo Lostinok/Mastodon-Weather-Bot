@@ -31,6 +31,16 @@ namespace LostinOK.Mastodon_Weather_Bot.Infrastructure
             return await ExecuteAPIRequest<GeoPointDetail>(request);
         }
 
+        public async Task<WeatherAPIResult<ZoneResult>> GetZones(double latitude, double longitude, string zoneType)
+        {
+            var request = new RestRequest("/zones")
+                .AddQueryParameter("type", zoneType)
+                .AddQueryParameter("point", latitude.ToString() + "," + longitude.ToString())
+                .AddQueryParameter("include_geometry", "false");
+
+            return await ExecuteAPIRequest<ZoneResult>(request);
+        }
+
         private async Task<WeatherAPIResult<T>> ExecuteAPIRequest<T>(RestRequest request)
         {
             var result = await _restClient.ExecuteGetAsync<T>(request);

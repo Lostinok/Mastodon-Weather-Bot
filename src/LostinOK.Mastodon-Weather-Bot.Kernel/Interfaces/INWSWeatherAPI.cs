@@ -10,5 +10,6 @@ namespace LostinOK.Mastodon_Weather_Bot.Kernel.Interfaces
     public interface INWSWeatherAPI
     {
         Task<WeatherAPIResult<GeoPointDetail>> GetPointAsync(double latitude, double longitude);
+        Task<WeatherAPIResult<ZoneResult>> GetZones(double latitude, double longitude, string zoneType);
     }
 }
