@@ -41,6 +41,15 @@ namespace LostinOK.Mastodon_Weather_Bot.Infrastructure
             return await ExecuteAPIRequest<ZoneResult>(request);
         }
 
+        public async Task<WeatherAPIResult<ObersvationStationResult>> GetObservationStationsByGridPoint(string forecastOfficeId, int x, int y)
+        {
+            var request = new RestRequest("/gridpoints/{officeId}/{gridpoint}/stations")
+                .AddUrlSegment("officeId", forecastOfficeId)
+                .AddUrlSegment("gridpoint", x.ToString() + "," + y.ToString());
+
+            return await ExecuteAPIRequest<ObersvationStationResult>(request);
+        }
+
         private async Task<WeatherAPIResult<T>> ExecuteAPIRequest<T>(RestRequest request)
         {
             var result = await _restClient.ExecuteGetAsync<T>(request);
