@@ -13,7 +13,7 @@ namespace LostinOK.Mastodon_Weather_Bot.Kernel.Entities.WeatherAPI
     using System.Text.Json.Serialization;
     using System.Globalization;
 
-    public partial class GeoPointDetail
+    public class GeoPointDetail
     {
         [JsonPropertyName("id")]
         public Uri Id { get; set; }
@@ -28,7 +28,7 @@ namespace LostinOK.Mastodon_Weather_Bot.Kernel.Entities.WeatherAPI
         public GeoPointDetailProperties Properties { get; set; }
     }
 
-    public partial class Geometry
+    public class Geometry
     {
         [JsonPropertyName("type")]
         public string Type { get; set; }
@@ -37,7 +37,7 @@ namespace LostinOK.Mastodon_Weather_Bot.Kernel.Entities.WeatherAPI
         public List<double> Coordinates { get; set; }
     }
 
-    public partial class GeoPointDetailProperties
+    public class GeoPointDetailProperties
     {
         [JsonPropertyName("@id")]
         public Uri Id { get; set; }
@@ -91,7 +91,7 @@ namespace LostinOK.Mastodon_Weather_Bot.Kernel.Entities.WeatherAPI
         public string RadarStation { get; set; }
     }
 
-    public partial class RelativeLocation
+    public class RelativeLocation
     {
         [JsonPropertyName("type")]
         public string Type { get; set; }
@@ -103,7 +103,7 @@ namespace LostinOK.Mastodon_Weather_Bot.Kernel.Entities.WeatherAPI
         public RelativeLocationProperties Properties { get; set; }
     }
 
-    public partial class RelativeLocationProperties
+    public class RelativeLocationProperties
     {
         [JsonPropertyName("city")]
         public string City { get; set; }
@@ -118,7 +118,7 @@ namespace LostinOK.Mastodon_Weather_Bot.Kernel.Entities.WeatherAPI
         public DistanceClass Bearing { get; set; }
     }
 
-    public partial class DistanceClass
+    public class DistanceClass
     {
         [JsonPropertyName("unitCode")]
         public string UnitCode { get; set; }

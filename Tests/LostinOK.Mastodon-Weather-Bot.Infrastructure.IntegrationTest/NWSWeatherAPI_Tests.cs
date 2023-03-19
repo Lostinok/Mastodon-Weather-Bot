@@ -42,7 +42,20 @@ namespace LostinOK.Mastodon_Weather_Bot.Infrastructure.IntegrationTest
             Assert.NotNull(result.Value.Zones);
             Assert.Single(result.Value.Zones);
             Assert.NotNull(result.Value.Zones[0].ZoneDetail);
+        }
 
+        [Fact]
+        public async Task GetObervationStationsbyGridPoint_Success()
+        {
+            var api = new NWSWeatherAPI(GetValidConfig());
+            var result = await api.GetObservationStationsByGridPoint("OUN", 100, 111);
+            Assert.NotNull(result);
+            Assert.NotNull(result.ExpirationDate);
+            Assert.NotNull(result.Value);
+            Assert.NotNull(result.Value.ObservationStations);
+            Assert.True(result.Value.ObservationStations.Count() > 0);
+            Assert.NotNull(result.Value.ObservationStations[0].StationDetail);
+            
         }
 
         private IConfiguration GetValidConfig()
